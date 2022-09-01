@@ -1,8 +1,9 @@
 const express = require("express")
 
 const app = express();
+app.use(express.static('public'))
 
-app.get("/", async (req, res)=>{
+app.get("/api", async (req, res)=>{
     res.send(new Date())
 })
 
